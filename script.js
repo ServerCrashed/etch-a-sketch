@@ -6,7 +6,7 @@ function grid(n=16){
         let r = document.createElement("div");
         r.style.border = "1px solid rgba(155, 154, 154, 0.253)";
         container.appendChild(r);
-        r.setAttribute("style","display:flex; justify-content:space-evenly")
+        r.setAttribute("style","display:flex;")
         for(let j=0; j<n;j++){        
             let c = document.createElement("div");
             c.classList.add("square");
