@@ -4,12 +4,22 @@ body {
 }
 
 #container {
-    width: 90vh;
-    height: 90vh;
+    width: 960px;
+    height: 960px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    border-radius: 1%;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    /* border-radius: 1%; */
     border: 2px solid rgb(155, 154, 154);
     /* justify-content: center; */
+}
+
+.square {
+    box-sizing: border-box;
+    width: calc(960px/16); /* Adjust for desired column count */
+    height: calc(960px/16); /* Ensure square aspect ratio */
+    background-color: rgb(255, 255, 255);
+    margin:0px;
+    border: 1px solid rgba(204, 204, 204, 0.507);
 }
