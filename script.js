@@ -16,3 +16,8 @@ for(let i=0;i<16;i++){
         r.appendChild(c);
     }
 }
+
+container.addEventListener('mouseover',(e)=>{
+    const target = e.target;
+    target.style.backgroundColor = "black";
+})

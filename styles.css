@@ -4,6 +4,7 @@ body {
 }
 
 #container {
+    margin-left: 50px;
     width: 960px;
     height: 960px;
     display: flex;
@@ -18,4 +19,18 @@ body {
     background-color: rgb(255, 255, 255);
     margin:0px;
     border: 1px solid rgba(204, 204, 204, 0.507);
+}
+
+#size {
+    height: 30px;
+    width: 80px;
+    position: absolute;
+    left:20px;
+    font-size: 95%;
+    font-weight: bolder;
+    text-align: center;
+    background-color: rgba(0, 174, 255, 0.911);
+    border-radius: 3px;
+    color: ghostwhite;
+    border: none;
 }
