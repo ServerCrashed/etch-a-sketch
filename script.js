@@ -1,7 +1,5 @@
 const container = document.querySelector("#container");
 
-console.log(`Height: ${container.offsetHeight}`);
-
 function grid(n=16){
     container.replaceChildren();
     for(let i=0;i<n;i++){
@@ -24,12 +22,18 @@ function ranColour(){
 }
 container.addEventListener('mouseover',(e)=>{
     const target = e.target;
-    // if(target.style.backgroundColor=="white") {
+    if((target.classList.contains('square')) && (!target.style.backgroundColor || target.style.backgroundColor==="transparent")) {
         const r = ranColour();
         const g = ranColour();
         const b = ranColour();
-        target.style.backgroundColor = `rgba(${r},${g},${b},0.1)`;
-    // }
+        target.style.backgroundColor = `rgba(${r},${g},${b})`;
+        target.style.opacity = 0.1;
+    }
+    else if(target.classList.contains('square')){
+        const a = getComputedStyle(target)['opacity'];
+        let na = +a+0.1;
+        target.style.opacity = na;
+    }
 })
 
 const mod = document.querySelector("#size");
