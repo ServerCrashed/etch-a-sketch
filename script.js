@@ -7,8 +7,6 @@ function grid(n=16){
     for(let i=0;i<n;i++){
         let r = document.createElement("div");
         r.style.border = "1px solid rgba(155, 154, 154, 0.253)";
-        r.style.width="100%";
-        r.style.height="100%";
         container.appendChild(r);
         r.setAttribute("style","display:flex; flex-direction:row; justify-content:space-evenly")
         for(let j=0; j<n;j++){        
@@ -21,10 +19,17 @@ function grid(n=16){
     }
 }
 
-
+function ranColour(){
+    return Math.floor(Math.random()*255);
+}
 container.addEventListener('mouseover',(e)=>{
     const target = e.target;
-    target.style.backgroundColor = "black";
+    // if(target.style.backgroundColor=="white") {
+        const r = ranColour();
+        const g = ranColour();
+        const b = ranColour();
+        target.style.backgroundColor = `rgba(${r},${g},${b},0.1)`;
+    // }
 })
 
 const mod = document.querySelector("#size");
